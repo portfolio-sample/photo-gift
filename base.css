@@ -299,16 +299,22 @@ body{
 }
 
 @media screen and (min-width: 960px) {
+  .photo-wrapper{
+    margin: 10px 5px 20px 5px;
+    width: 130px;
+  }
   .a-photo{
-   margin: 10px 10px 20px 10px;
-   width: 130px;
+   width: 100%;
   }
 }
 
 @media screen and (max-width: 959px) {
+  .photo-wrapper{
+    margin: 10px 5px 20px 5px;
+    width: 30%;
+  }
   .a-photo{
-   margin: 10px 5px 20px 5px;
-   width: 30%;
+   width: 100%;
   }
 }
 
@@ -539,8 +545,9 @@ body{
     flex-wrap: wrap;
   }
 
-  .download-icon >img {
-    margin: 5px;
+  .dl-wrapper{
+   margin: 5px;
+   border: solid;
   }
 
   .cal-icon{
@@ -655,8 +662,9 @@ body{
     display: flex;
   }
 
-  .download-icon >img {
-    margin: 5px;
+  .dl-wrapper{
+   margin: 5px;
+   border: solid;
   }
 
   .cal-icon{
