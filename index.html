@@ -75,12 +75,12 @@
   <div class="gallery">
     <div class="gallery-inner fadein">
       <div class="photos">
-        <img src="img/13B8C77F-3860-41DB-922C-6BA85994CDD3INSTA.jpg" alt="写真イメージ" class="a-photo">
-        <img src="img/DSCF5060-EditINSTA.jpg" alt="写真イメージ" class="a-photo">
-        <img src="img/DSCF7640INSTA.jpg" alt="写真イメージ" class="a-photo">
-        <img src="img/C53177CA-1EA1-4311-BFF0-D53316C20196INSTA.jpg" alt="写真イメージ" class="a-photo">
-        <img src="img/E6B5A884-204E-422A-A5CD-955F32C92AC5INSTA.jpg" alt="写真イメージ" class="a-photo">
-        <img src="img/646AF851-C623-43AE-B796-65DBEAA9511CINSTA.jpg" alt="写真イメージ" class="a-photo">
+        <div class="photo-wrapper"><img src="img/13B8C77F-3860-41DB-922C-6BA85994CDD3INSTA.jpg" alt="写真イメージ" class="a-photo"></div>
+        <div class="photo-wrapper"><img src="img/DSCF5060-EditINSTA.jpg" alt="写真イメージ" class="a-photo"></div>
+        <div class="photo-wrapper"><img src="img/DSCF7640INSTA.jpg" alt="写真イメージ" class="a-photo"></div>
+        <div class="photo-wrapper"><img src="img/C53177CA-1EA1-4311-BFF0-D53316C20196INSTA.jpg" alt="写真イメージ" class="a-photo"></div>
+        <div class="photo-wrapper"><img src="img/E6B5A884-204E-422A-A5CD-955F32C92AC5INSTA.jpg" alt="写真イメージ" class="a-photo"></div>
+        <div class="photo-wrapper"><img src="img/646AF851-C623-43AE-B796-65DBEAA9511CINSTA.jpg" alt="写真イメージ" class="a-photo"></div>
       </div>
       <div class="view-instagram">
         <a href="#">View Instagram ></a>
@@ -180,9 +180,9 @@
             <img src="img/footer_app_dl.png" width="150px">
           </div>
           <div class="download-icon">
-            <img src="img/ico-cal.png" alt="カレンダーのアイコン" class="cal"width="30px">
-            <img src="img/bnr_appstore.png" alt="アップストアのアイコン" width="130px">
-            <img src="img/bnr_googleplay.png" alt="Googleプレイのアイコン" width="130px">
+            <div class="dl-wrapper"><img src="img/ico-cal.png" alt="カレンダーのアイコン" class="cal"width="30px"></div>
+            <div class="dl-wrapper"><img src="img/bnr_appstore.png" alt="アップストアのアイコン" width="130px"></div>
+            <div class="dl-wrapper"><img src="img/bnr_googleplay.png" alt="Googleプレイのアイコン" width="130px"></div>
           </div>
         </div>
         <div class="share-sns">
@@ -200,9 +200,9 @@
     </div>
   </div>
 
-  <div class="start">
+  <!-- <div class="start">
       <p><img src="img/logo.png" alt=""></p>
-  </div>
+  </div> -->
 
 </div>
 
@@ -210,15 +210,15 @@
   <script>
   $(function(){
   // オープニングデモ
-    $(function() {
-    	setTimeout(function(){
-    		$('.start p').fadeIn(1600);
-    	},500);
-    	setTimeout(function(){
-    		$('.start').fadeOut(500);
-    	},2500);
-    });
-
+    // $(function() {
+    // 	setTimeout(function(){
+    // 		$('.start p').fadeIn(1600);
+    // 	},500);
+    // 	setTimeout(function(){
+    // 		$('.start').fadeOut(500);
+    // 	},2500);
+    // });
+    //
 
   // ハンバーガーメニューのボタン
     $(".menu-trigger").on("click", function(){
