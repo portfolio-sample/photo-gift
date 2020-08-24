@@ -49,9 +49,10 @@ body{
 	transform: translate(-50%, -50%);
 	display: none;
 	z-index: 9999;
-	width: 280px;
 }
-
+.start >p >img{
+  width: 120px;
+}
 
 /* ここからサイドバーとメインの区分けるCSS */
 .side{
@@ -235,17 +236,39 @@ body{
 
 .eye-catch{
   background-image: url("img/okuru_topimg_pc02.jpg");
+  background-position: center center;
   background-size: cover;
   width: 100%;
   height: 500px;
 }
 
 
-.Recommended{
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
+
+@media screen and (min-width: 960px) {
+  .Recommended{
+    position: absolute;
+    right: 20px;
+    bottom: 5%;
+  }
+  .Recommended >a >img{
+    width: 150px;
+  }
 }
+
+@media screen and (max-width: 959px) {
+  .Recommended{
+    position: absolute;
+    right: 20px;
+    bottom: 15%;
+  }
+  .Recommended >a >img{
+    width: 100px;
+  }
+}
+
+
+
+
 
 .close{
   display: none;
@@ -364,7 +387,7 @@ body{
 }
 
 .m-btn{
-  border: solid;
+  border: solid 0.5px;
   width: 100px;
   margin: 0 auto 0 auto;
   text-align: center;
@@ -500,7 +523,6 @@ body{
 
   .footer-main-link >ul{
     border-left: solid 0.5px ;
-
     list-style: none;
     padding: 0 40px 0 20px ;
   }
@@ -517,16 +539,32 @@ body{
     flex-wrap: wrap;
   }
 
+  .download-icon >img {
+    margin: 5px;
+  }
+
+  .cal-icon{
+    width: 40px;
+  }
+
   .share-sns{
     display: flex;
     flex-wrap: wrap;
     margin-top: 20px;
   }
 
+  .sns-title{
+    padding-top: 5px;
+  }
+
   .sns-icon{
     display: flex;
     list-style: none;
-    margin:5px;
+    margin-top: 0;
+  }
+
+  .sns-icon >li >img{
+    padding: 5px;
   }
 }
 
@@ -619,6 +657,10 @@ body{
 
   .download-icon >img {
     margin: 5px;
+  }
+
+  .cal-icon{
+    width: 40px;
   }
 
   .share-sns{
