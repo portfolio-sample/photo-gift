@@ -1,0 +1,640 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.wrap{
+  display: flex;
+  overflow: hidden;
+}
+
+.fadein{
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.5s;
+}
+
+.fadein-left{
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: 0.5s;
+}
+
+.fadein-right{
+  opacity: 0;
+  transform: translateX(20px);
+  transition: 0.5s;
+}
+
+.start{
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9000;
+}
+
+
+.start p {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+	z-index: 9999;
+	width: 280px;
+}
+
+
+/* ここからサイドバーとメインの区分けるCSS */
+.side{
+  width: 220px;
+  min-width: 220px;
+  padding: 50px 0 0 20px;
+}
+
+.main{
+  width: 100%;
+}
+
+  @media screen and (max-width: 959px) {
+    .side{
+      padding: 0;
+      width: 100%;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      text-align: center;
+      z-index: 20;
+      transform: translateY(0vw);
+    }
+
+    .logo{
+      position: relative;
+    }
+
+    .logo >h1{
+      display: block;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .logo >h1 >a >img{
+      width: 120px;
+    }
+
+    .side-other{
+      margin-top: 50px;
+    }
+
+    .is-active{
+      display: none;
+    }
+
+    .share-sns-sp{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0 20px 0;
+    }
+
+    .copy-rights{
+      margin-bottom: 30px;
+    }
+
+    .eye-catch{
+      z-index: 10;
+    }
+
+  }
+
+
+/* ここまでサイドバーとメインの区分けるCSS */
+
+/* ここからサイドバーのCSS */
+.logo{
+  padding: 30px 10px
+}
+
+.nav{
+  padding: 10px 10px
+}
+
+.nav >ul{
+  list-style: none;
+}
+
+.nav >ul >li{
+  padding: 5px 0px;
+}
+
+.good-design{
+  padding: 10px 10px
+}
+
+@media screen and (min-width: 960px) {
+  .logo >h1 >a >img{
+    width: 150px;
+  }
+
+  .share-sns-sp{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 959px) {
+
+  .menu-trigger, .menu-trigger span {
+    display: inline-block;
+    transition: all .4s;
+    box-sizing: border-box;
+  }
+
+  .menu-trigger {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin: 20px 20px 0 auto;
+  }
+
+  .menu-trigger >span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    border-radius: 4px;
+  }
+
+  .menu-trigger >span:nth-of-type(1) {
+    top: 0;
+  }
+
+  .menu-trigger >span:nth-of-type(2) {
+    top: 10px;
+  }
+
+  .menu-trigger >span:nth-of-type(3) {
+    top: 20px;
+  }
+
+  .menu-trigger.active span:nth-of-type(1) {
+    -webkit-transform: translateY(10px) rotate(-45deg);
+    transform: translateY(10px) rotate(-45deg);
+  }
+
+  .menu-trigger.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  .menu-trigger.active span:nth-of-type(3) {
+    -webkit-transform: translateY(-10px) rotate(45deg);
+    transform: translateY(-10px) rotate(45deg);
+  }
+
+}
+/* ここまでサイドバーのCSS */
+
+/* ここからヘッダーのCSS */
+.header{
+  position: relative;
+  margin: 10px 0 10px 0;
+}
+
+.sns{
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  width: 30%;
+  margin: 0 50px 0 auto;
+}
+
+.sns-icon{
+  margin: 5px;
+}
+
+@media screen and (max-width: 959px) {
+  .header-inner >.sns{
+    display: none;
+  }
+}
+
+/* ここまでヘッダーのCSS */
+
+/* ここからアイキャッチのCSS */
+
+.eye-catch{
+  background-image: url("img/okuru_topimg_pc02.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+}
+
+
+.Recommended{
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.close{
+  display: none;
+}
+
+.news-arrow{
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.arrow-rotate{
+  transform: rotate(180deg);
+}
+
+/* ここまでアイキャッチのCSS */
+
+/* ここからギャラリーのCSS */
+.gallery-inner{
+  padding: 50px 0 30px 0;
+}
+
+.photos{
+  display: flex;
+  justify-content: center;
+  flex-wrap:wrap;
+}
+
+@media screen and (min-width: 960px) {
+  .a-photo{
+   margin: 10px 10px 20px 10px;
+   width: 130px;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  .a-photo{
+   margin: 10px 5px 20px 5px;
+   width: 30%;
+  }
+}
+
+.view-instagram >a{
+  display: block;
+  text-align: right;
+  margin: 0 20px 0 auto;
+  color: gray;
+  text-decoration: none;
+}
+/* ここまでギャラリーのCSS */
+
+/* ここから「想い(belief)」のCSS */
+.belief{
+  background-color: #FCFBE4;
+}
+
+@media screen and (min-width: 960px) {
+  .belief-inner{
+    display: flex;
+    padding: 100px 0;
+  }
+
+  .belief-photo{
+    margin-right: 50px;
+    width: 60%;
+  }
+
+  .belief-photo >img{
+    width: 100%;
+  }
+
+  .belief-messages >p{
+    line-height: 2em;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  .belief-inner{
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 100px 0;
+  }
+
+  .belief-photo >img{
+    width: 100%;
+  }
+
+  .belief-messages{
+    text-align: center;
+  }
+
+  .belief-title{
+    padding: 50px 0 30px 0;
+  }
+
+  .belief-messages >p{
+    line-height: 2em;
+  }
+}
+/* ここまで「想い(belief)」のCSS */
+
+/* ここから「サービス」のCSS */
+.service-inner{
+  width: 95%;
+  padding: 50px 20px 50px 20px;
+}
+
+.service-title{
+  margin: 0 auto 0 auto;
+  text-align: center;
+}
+
+.calender-msg >p, .canvas-msg >p, .gift-msg >p{
+  line-height: 2em;
+}
+
+.m-btn{
+  border: solid;
+  width: 100px;
+  margin: 0 auto 0 auto;
+  text-align: center;
+  padding: 10px 0 10px 0;
+}
+
+@media screen and (min-width: 960px) {
+
+  .calender{
+    margin: 20px 0 100px 0;
+  }
+
+  .calender-img >img{
+    width: 100%;
+  }
+
+  .calender-msg{
+    margin: 30px 0 30px 0;
+    display: flex;
+    justify-content: center;
+
+  }
+
+  .calender-msg >h3 >img{
+    width: 200px;
+    margin-right: 20px;
+  }
+
+  .other-service{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+  }
+
+  .canvas, .gift{
+    width: 45%;
+    margin: 0 10px 0 10px;
+  }
+
+  .canvas-img >img, .gift-img >img{
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .canvas-msg, .gift-msg{
+    text-align: center;
+    margin: 40px 0 40px 0;
+  }
+
+  .calender-msg >h3 >img{
+    width: 200px;
+    margin-bottom: 20px;
+  }
+
+  .canvas-msg >h3 >img, .gift-msg >h3 >img{
+    width: 200px;
+    margin-bottom: 20px;
+  }
+
+}
+
+@media screen and (max-width: 959px) {
+  .service-inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .calender, .canvas, .gift{
+    margin: 20px 0 100px 0;
+  }
+
+  .calender-img, .canvas-img, .gift-img{
+    text-align: center;
+  }
+
+  .calender-img >img, .canvas-img >img, .gift-img >img{
+    width: 80%;
+    border-radius: 5px;
+  }
+
+  .calender-msg, .canvas-msg, .gift-msg{
+    margin: 30px 0 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .calender-msg >h3 >img{
+    width: 150px;
+    margin-bottom: 20px;
+  }
+
+  .canvas-msg >h3 >img, .gift-msg >h3 >img{
+    width: 200px;
+    margin-bottom: 20px;
+  }
+
+}
+/* ここまで「サービス」のCSS */
+
+/* ここからフッターのCSS */
+.footer{
+  background-color: #DCD0C1;
+  position: relative;
+  width: 100%;
+}
+
+@media screen and (min-width: 960px) {
+  .top-scroll{
+    display: none;
+  }
+
+  .footer-inner{
+    display: flex;
+    width: 100%;
+    padding: 50px 0 50px 0;
+  }
+
+  .footer-logo{
+    padding: 0 50px 0 20px;
+  }
+
+  .footer-logo >img{
+    width: 150px;
+  }
+
+  .footer-main-link{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .footer-main-link >ul{
+    border-left: solid 0.5px ;
+
+    list-style: none;
+    padding: 0 40px 0 20px ;
+  }
+
+  .footer-main-link >ul >li{
+    padding-bottom: 15px;
+  }
+
+  .footer-sub-link{
+  }
+
+  .download-icon{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .share-sns{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  .sns-icon{
+    display: flex;
+    list-style: none;
+    margin:5px;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  .top-scroll{
+    cursor: pointer;
+    position: absolute;
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    color: white;
+    text-align: center;
+    font-size: 13px;
+  }
+
+  .arrow-wrapper{
+    width: 10px;
+    margin: auto;
+  }
+
+  .arrow{
+    width: 10px;
+    height: 10px;
+    border-top: solid white;
+    border-right: solid white;
+    transform: rotate(-45deg);
+    margin-top: 10px;
+  }
+
+  .footer-inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 50px 0 50px 0;
+  }
+
+  .footer-logo{
+    text-align: center;
+  }
+
+  .footer-logo >img{
+    width: 120px;
+  }
+
+  .main-link-wrapper{
+    width: 80%;
+    padding: 20px 0 20px 0;
+    border-top: solid 0.5px;
+    border-bottom: solid 0.5px;
+    margin-top: 20px;
+  }
+
+  .footer-main-link{
+    width: 90%;
+    margin: auto;
+    display: flex;
+  }
+
+  .link-left{
+    list-style: none;
+    padding: 0 40px 0 20px ;
+  }
+
+  .link-right{
+    list-style: none;
+    padding: 0 0 0 20px ;
+  }
+
+  .footer-main-link >ul >li{
+    padding-bottom: 10px;
+    font-size: 13px;
+  }
+
+  .footer-main-link >.link-right{
+    border-left: solid 0.5px ;
+  }
+
+  .footer-sub-link{
+    padding: 20px 0 20px 0;
+    text-align: center;
+  }
+
+  .download-icon{
+    display: flex;
+  }
+
+  .download-icon >img {
+    margin: 5px;
+  }
+
+  .share-sns{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .sns-icon{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+
+  .a-icon{
+    margin:5px;
+  }
+}
