@@ -108,12 +108,14 @@ body{
       margin: 20px 0 20px 0;
     }
 
-    .sns-wrapper{
-      width: 40px;
+    .sns-icon{
+      border: solid;
     }
-
-    .sns-wrapper >li >img{
-       width: 100%;
+  
+    .sns-icon >li >img{
+      border: solid;
+      margin: 5px;
+      width: 40px;
     }
 
 
